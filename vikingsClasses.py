@@ -15,6 +15,8 @@ class Soldier:
         self.health -= damage
        
     
+    def receiveDamage(self, damage):
+        self.health -= damage
 
 # Viking
 
@@ -42,33 +44,39 @@ class Viking(Soldier):
 
 class Saxon(Soldier):
     def __init__(self, health, strength):
-        
+        super().__init__(health, strength)
 
     def receiveDamage(self, damage):
-    
-    pass
-     
+        self.health -= damage
+        if self.health > 0:
+            return f"A Saxon has received {damage} points of damage"
+        else:
+            return f"A Saxon has died in combat"    
 
 # Davicente
 
 class War():
     def __init__(self):
-       
-        
+        # your code here
+        pass
     def addViking(self, viking):
-        
+        # your code here
+        pass
     
     def addSaxon(self, saxon):
-        
-    
+        # your code here
+        pass
+
     def vikingAttack(self):
-        
+        # your code here
+        pass
 
     def saxonAttack(self):
-       
+        # your code here
+        pass
 
     def showStatus(self):
-        
-    pass
-pass
+        # your code here
+        pass
+    
 
